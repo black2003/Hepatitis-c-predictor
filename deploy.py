@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
-from sklearn.externals import joblib
+import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 
