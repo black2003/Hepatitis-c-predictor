@@ -38,7 +38,7 @@ if analysis_option == "Predictor":
     GGT = st.text_input("GGT","Type Here(GGT Level)")
     PROT = st.text_input("PROT","Type Here(Protein Level)")
     analysis_method = st.selectbox(
-        "Select Sentiment Analysis Method:",
+        "Select Analysis Method:",
         ("LightGBM", "XGBoost")
     )
     features = np.array([[age,sex,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT]])
