@@ -2,16 +2,15 @@ import pandas as pd
 import streamlit as st
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
-import pickle5 as pickle
+from sklearn.externals import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(
     page_title="Hepatitis C prediction"
 )
-
-LightGBM = pickle.load(open("LGBMCClassy.pkl", 'rb'))
-XGBoost = pickle.load(open("Xgb.pkl", 'rb'))
+LightGBM = joblib.load('LGBMCClassy.pkl')
+XGBoost = joblib.load('Xgb.pkl')
 analysis_option = st.sidebar.selectbox(
     "Select analysis option:",
     ("Predictor", "About Model Used", "About Us")
