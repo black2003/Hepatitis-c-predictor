@@ -39,6 +39,7 @@ if analysis_option == "Predictor":
         "Select Analysis Method:",
         ("LightGBM", "XGBoost")
     )
+    result = 0
     features = np.array([[age,sex,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT]])
     if analysis_method == "LightGBM":
         if st.button("Predict"):
