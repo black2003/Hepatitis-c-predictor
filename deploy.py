@@ -47,7 +47,7 @@ if analysis_option == "Predictor":
     )
     
     features = np.array([[age,sexn,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT]])
-    df = pd.DataFrame({"Age":age,"Sex": sexn,"ALB":ALB,"ALP":ALP,"ALT":ALT,"AST":AST,"BIL":BIL,"CHE":CHE,"CHOL":CHOL,"CREA":CREA,"GGT":GGT,"PROT":PROT})
+    df = pd.DataFrame({"Age": age, "Sex": sexn, "ALB": ALB, "ALP": ALP, "ALT": ALT, "AST": AST, "BIL": BIL, "CHE": CHE, "CHOL": CHOL, "CREA": CREA, "GGT": GGT, "PROT": PROT}, index=[0])
     if analysis_method == "LightGBM":
         if st.button("Predict"):
             result=LightGBM.predict(df)
