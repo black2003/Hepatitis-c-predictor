@@ -4,6 +4,7 @@ from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
 import pickle
 import matplotlib.pyplot as plt
+import numpy as np
 
 st.set_page_config(
     page_title="Hepatitis C prediction"
