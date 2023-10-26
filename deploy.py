@@ -23,8 +23,13 @@ if analysis_option == "Predictor":
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
+    sexn = 0
     age = st.text_input("Age","Type Here")
     sex = st.selectbox("Sex:",("Male","Female"))
+    if sex == "Male":
+        sexn = 1
+    elif sex == "Female":
+        sexn = 2
     ALB = st.text_input("ALB","Type Here(Albumin level)")
     ALP = st.text_input("ALP","Type Here(ALP Level)")
     ALT = st.text_input("ALT","Type Here(ALT Level)")
@@ -40,7 +45,7 @@ if analysis_option == "Predictor":
         ("LightGBM", "XGBoost")
     )
     result = 0
-    features = np.array([[age,sex,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT]])
+    features = np.array([[age,sexn,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT]])
     if analysis_method == "LightGBM":
         if st.button("Predict"):
             result=LightGBM.predict(features)
