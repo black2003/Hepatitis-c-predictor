@@ -45,14 +45,15 @@ if analysis_option == "Predictor":
         "Select Analysis Method:",
         ("LightGBM", "XGBoost")
     )
-    result = 0
+    
     features = np.array([[age,sexn,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT]])
+    df = pd.DataFrame({"Age":age,"Sex": sexn,"ALB":ALB,"ALP":ALP,"ALT":ALT,"AST":AST,"BIL":BIL,"CHE":CHE,"CHOL":CHOL,"CREA":CREA,"GGT":GGT,"PROT":PROT})
     if analysis_method == "LightGBM":
         if st.button("Predict"):
-            result=LightGBM.predict(features)
+            result=LightGBM.predict(df)
     elif analysis_method == "XGBoost":
         if st.button("Predict"):
-            result=XGBoost.predict(features)
+            result=XGBoost.predict(df)
     if result == 0:
         st.success("Congrats! You are free of Hepatitis")
     elif result == 1:
