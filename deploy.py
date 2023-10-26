@@ -46,7 +46,7 @@ if analysis_option == "Predictor":
         ("LightGBM", "XGBoost")
     )
     result = 5
-    features = np.array([[age,sexn,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT]])
+    features = np.array([[age,ALB,ALP,ALT,AST,BIL,CHE,CHOL,CREA,GGT,PROT,sexn]])
     df = pd.DataFrame({"Age": age, "ALB": ALB, "ALP": ALP, "ALT": ALT, "AST": AST, "BIL": BIL, "CHE": CHE, "CHOL": CHOL, "CREA": CREA, "GGT": GGT, "PROT": PROT,  "Sex": sexn}, index=[0])
     if analysis_method == "LightGBM":
         if st.button("Predict"):
