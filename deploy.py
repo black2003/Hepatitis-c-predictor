@@ -10,8 +10,8 @@ st.set_page_config(
     page_title="Hepatitis C prediction"
 )
 
-LightGBM = pickle.load("LGBMCClassy.pkl", 'rb')
-XGBoost = pickle.load("Xgb.pkl", 'rb')
+LightGBM = pickle.load(open("LGBMCClassy.pkl", 'rb'))
+XGBoost = pickle.load(open("Xgb.pkl", 'rb'))
 analysis_option = st.sidebar.selectbox(
     "Select analysis option:",
     ("Predictor", "About Model Used", "About Us")
