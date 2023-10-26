@@ -1,0 +1,4 @@
+Model: LGBMClassifier
+Metrics: {'Accuracy': 0.943089430894309, 'Precision': 0.9132549361207898, 'Recall': 0.943089430894309, 'F1-Score': 0.927807821064636, 'Jaccard Index': 0.9058023615950446, 'True Positive Rate': array([1. , 1. , 0.5, 0. ]), 'False Positive Rate': array([0.00909091, 1.        ,        nan,        nan])}
+Cross-Validated Score: [0.92682927 0.96747967 0.95934959 0.91869919 0.8699187 ]
+Cross-Validated Score Mean: 0.9284552845528455

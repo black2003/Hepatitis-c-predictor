@@ -1,0 +1,4 @@
+Model: XGBClassifier
+Metrics: {'Accuracy': 0.9349593495934959, 'Precision': 0.926127564847077, 'Recall': 0.9349593495934959, 'F1-Score': 0.9272896400586501, 'Jaccard Index': 0.8985756226609884, 'True Positive Rate': array([1. , 1. , 0. , 0.5]), 'False Positive Rate': array([0.00909091, 1.        , 1.        ,        nan])}
+Cross-Validated Score: [0.95121951 0.95121951 0.95121951 0.91056911 0.87804878]
+Cross-Validated Score Mean: 0.9284552845528455
