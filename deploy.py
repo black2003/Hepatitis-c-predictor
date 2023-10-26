@@ -24,22 +24,22 @@ if analysis_option == "Predictor":
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     sexn = 0
-    age = st.text_input("Age","Type Here")
+    age = st.number_input("Age","Type Here")
     sex = st.selectbox("Sex:",("Male","Female"))
     if sex == "Male":
         sexn = 1
     elif sex == "Female":
         sexn = 2
-    ALB = st.text_input("ALB","Type Here(Albumin level)")
-    ALP = st.text_input("ALP","Type Here(ALP Level)")
-    ALT = st.text_input("ALT","Type Here(ALT Level)")
-    AST = st.text_input("AST","Type Here(AST Level)")
-    BIL = st.text_input("BIL","Type Here(BIL Level)")
-    CHE = st.text_input("ALP","Type Here(CHE Level)")
-    CHOL = st.text_input("CHOL","Type Here(CHOL Level)")
-    CREA = st.text_input("CREA","Type Here(CREA Level)")
-    GGT = st.text_input("GGT","Type Here(GGT Level)")
-    PROT = st.text_input("PROT","Type Here(Protein Level)")
+    ALB = st.number_input("ALB","Type Here(Albumin level)")
+    ALP = st.number_input("ALP","Type Here(ALP Level)")
+    ALT = st.number_input("ALT","Type Here(ALT Level)")
+    AST = st.number_input("AST","Type Here(AST Level)")
+    BIL = st.number_input("BIL","Type Here(BIL Level)")
+    CHE = st.number_input("ALP","Type Here(CHE Level)")
+    CHOL = st.number_input("CHOL","Type Here(CHOL Level)")
+    CREA = st.number_input("CREA","Type Here(CREA Level)")
+    GGT = st.number_input("GGT","Type Here(GGT Level)")
+    PROT = st.number_input("PROT","Type Here(Protein Level)")
     analysis_method = st.selectbox(
         "Select Analysis Method:",
         ("LightGBM", "XGBoost")
